@@ -7,7 +7,7 @@ This help you to navigate through components with some data.
 
 All you need to do is one angular project.<br>
 You can create the project by open your terminal.<br>
-** ng new PROJECT_NAME --routing**
+**ng new PROJECT_NAME --routing**<br>
 Here routing flag will auto generate the app-routing.module.ts file where we keep our routing paths.
 
 ## Use of package
@@ -16,6 +16,7 @@ Here routing flag will auto generate the app-routing.module.ts file where we kee
 3. Import the **NavigationWithDataComponent** class in your componet where you want to use this package
 Now you can use the package's methods.
 ### app.module.ts
+```
 import { NavigationWithDataComponent } from "navigation-with-data";
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { NavigationWithDataComponent } from "navigation-with-data";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+```
 ### app-routing.module.ts
+```
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -50,7 +53,9 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```
 ### home.component.ts
+```
 import { Component, OnInit } from '@angular/core';
 import { NavigationWithDataComponent } from 'navigation-with-data';
 
@@ -71,8 +76,10 @@ export class HomeComponent implements OnInit {
   }
   
 }
+```
 
 ### about.component.ts
+```
 import { Component, OnInit } from '@angular/core';
 import { NavigationWithDataComponent } from 'navigation-with-data';
 
@@ -92,6 +99,7 @@ export class AboutComponent implements OnInit {
   }
 
 }
+```
 
 ## Properties
 
