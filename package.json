@@ -1,0 +1,21 @@
+{
+  "name": "navigation-with-data",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/navigation-with-data.umd.js",
+  "module": "fesm5/navigation-with-data.js",
+  "es2015": "fesm2015/navigation-with-data.js",
+  "esm5": "esm5/navigation-with-data.js",
+  "esm2015": "esm2015/navigation-with-data.js",
+  "fesm5": "fesm5/navigation-with-data.js",
+  "fesm2015": "fesm2015/navigation-with-data.js",
+  "typings": "navigation-with-data.d.ts",
+  "metadata": "navigation-with-data.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
