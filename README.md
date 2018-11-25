@@ -1,5 +1,6 @@
 # Description
-
+This package is for navigate with data in angular, angular 2, 3, 4, 5.<br>
+This package is for send data from one component to other in angular 2, 3, 4, 5.<br>
 This package is mainly for beginner of Angular developement.<br>
 This help you to navigate through components with some data.
 
@@ -8,16 +9,17 @@ This help you to navigate through components with some data.
 All you need to do is one angular project.<br>
 You can create the project by open your terminal.<br>
 **ng new PROJECT_NAME --routing**<br>
-Here routing flag will auto generate the app-routing.module.ts file where we keep our routing paths.
-
+Here routing flag will auto generate the app-routing.module.ts file where we keep our routing paths.<br>
+Install **ngx-navigation-with-data**<br>
+```npm i ngx-navigation-with-data --save```
 ## Use of package
-1. First you need to import the **NavigationWithDataComponent** class in you app.module.ts
-2. Define some path in app-routing.module.ts file
-3. Import the **NavigationWithDataComponent** class in your componet where you want to use this package
+1. First you need to import the **NgxNavigationWithDataComponent** class in you app.module.ts<br>
+2. Define some path in app-routing.module.ts file<br>
+3. Import the **NgxNavigationWithDataComponent** class in your componet where you want to use this package<br>
 Now you can use the package's methods.
 ### app.module.ts
 ```
-import { NavigationWithDataComponent } from "navigation-with-data";
+import { NgxNavigationWithDataComponent } from "ngx-navigation-with-data";
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,7 @@ import { NavigationWithDataComponent } from "navigation-with-data";
   imports: [
     AppRoutingModule
   ],
-  providers: [NavigationWithDataComponent],
+  providers: [NgxNavigationWithDataComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
@@ -57,7 +59,7 @@ export class AppRoutingModule { }
 ### home.component.ts
 ```
 import { Component, OnInit } from '@angular/core';
-import { NavigationWithDataComponent } from 'navigation-with-data';
+import { NgxNavigationWithDataComponent } from 'ngx-navigation-with-data';
 
 @Component({
   selector: 'app-home',
@@ -66,7 +68,7 @@ import { NavigationWithDataComponent } from 'navigation-with-data';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public navCtrl: NavigationWithDataComponent) { }
+  constructor(public navCtrl: NgxNavigationWithDataComponent) { }
 
   ngOnInit() {
   }
@@ -81,7 +83,7 @@ export class HomeComponent implements OnInit {
 ### about.component.ts
 ```
 import { Component, OnInit } from '@angular/core';
-import { NavigationWithDataComponent } from 'navigation-with-data';
+import { NgxNavigationWithDataComponent } from 'ngx-navigation-with-data';
 
 @Component({
   selector: 'app-about',
@@ -90,7 +92,7 @@ import { NavigationWithDataComponent } from 'navigation-with-data';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(public navCtrl: NavigationWithDataComponent) {
+  constructor(public navCtrl: NgxNavigationWithDataComponent) {
     console.log(this.navCtrl.get('name')); // it will console Virendra
     console.log(this.navCtrl.data); // it will console whole data object here
   }
